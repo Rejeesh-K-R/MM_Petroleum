@@ -3,7 +3,7 @@
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href=""/>
-		<title>Home</title>
+		<title>Product Sales</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta property="og:locale" content="en_US" />
@@ -318,7 +318,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link active" href="../MM_petroleums/index.html">
+                                        <a class="menu-link " href="../MM_petroleums/index.html">
                                             <span class="menu-icon">
                                                 <span><i class="fa-solid fa-gas-pump"></i></span>
                                             </span>
@@ -419,9 +419,10 @@
 										</div>
 										<!--end:Menu item-->
 
-										<div class="menu-item">
+
+                                        <div class="menu-item">
                                             <!--begin:Menu link-->
-                                            <a class="menu-link " href="../MM_petroleums/product_sales.html">
+                                            <a class="menu-link active" href="../MM_petroleums/product_sales.html">
                                                 <span class="menu-icon">
                                                     <span><i class="fa-solid fa-gas-pump"></i></span>
                                                 </span>
@@ -500,18 +501,7 @@
 										</div> -->
 
 
-										<!-- Purchase/Sales Dropdown (aligned right) -->
-										<div class="col-lg-3 col-md-4 col-12 text-md-end text-center mb-3">
-											<div class="d-flex flex-column align-items-center">
-												<h5 class="fw-semibold fs-6 mb-2">Morning/Evening</h5>
-												<select class="form-select form-select-solid" name="invoice_type" data-control="select2" data-hide-search="true" data-placeholder="Morning/Evening" data-kt-ecommerce-product-filter="status">
-													<option></option>
-													<option value="morning" selected>Morning</option>
-													<option value="evening">Evening</option>
-												</select>
-											</div>
-										</div>
-									<!--end::Toolbar wrapper-->
+										
 								</div>
 								<!--end::Toolbar container-->
 							
@@ -536,109 +526,207 @@
             
             <!--begin::Content-->
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div id="kt_account_settings_profile_details" class="collapse show">
                         <!--begin::Form-->
                         <form id="kt_account_profile_details_form" class="form">
                             <!--begin::Card body-->
                             <div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
                                 <!--begin::Input group-->
-                                <div class="row mb-6">
-                                    <!--begin::Label-->
-                                    <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Petrol</h1>
-                                    <!--end::Label-->
+                                <div class="form-container">
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Product Name</label>
+                                        <div class="col-lg-8 fv-row">
+                                            <input type="text" id="product_name" class="form-control form-control-lg form-control-solid" readonly />
+                                            <span onclick="openPopup(event)"><b>Select a Product</b></span>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Quantity</label>
+                                        <div class="col-lg-8 fv-row">
+                                            <input type="number" id="quantity" class="form-control form-control-lg form-control-solid" oninput="calculateTotal()" />
+                                        </div>
+                                    </div>
+                            
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Unit Price</label>
+                                        <div class="col-lg-8 fv-row">
+                                            <input type="number" id="unit_price" class="form-control form-control-lg form-control-solid" oninput="calculateTotal()" />
+                                        </div>
+                                    </div>
+                            
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Total Amount</label>
+                                        <div class="col-lg-8 fv-row">
+                                            <input type="text" id="total_amount" class="form-control form-control-lg form-control-solid" readonly />
+                                        </div>
+                                    </div>
+                            
+                                    <div class="row mb-6">
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Paid Amount</label>
+                                        <div class="col-lg-8 fv-row">
+                                            <input type="text" id="paid_amount" class="form-control form-control-lg form-control-solid" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <!--end::Input group-->
-
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Date</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="date" id="start_reading_petrol" class="form-control form-control-lg form-control-solid" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Pump</label>
-									<div class="col-lg-8 fv-row">
-									  <select name="time_of_day_petrol" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
-										<option value="pump1">Pump 1</option>
-										<option value="pump2">Pump 2</option>
-									  </select>
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Stock Available</label>
-									<div class="col-lg-6 fv-row">
-									  <input type="text" id="stock_available" class="form-control form-control-lg form-control-solid" value="100" readonly />
-									</div>
-									<div class="col-lg-2">
-									  <button id="reset_stock" class="btn btn-warning">Reset</button>
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">New Stock</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="number" id="new_stock" class="form-control form-control-lg form-control-solid" placeholder="New Stock" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Start Reading</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="number" id="start_reading" class="form-control form-control-lg form-control-solid" placeholder="Start Reading" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">End Reading</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="number" id="end_reading" class="form-control form-control-lg form-control-solid" placeholder="End Reading" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Test</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="number" id="test" class="form-control form-control-lg form-control-solid" placeholder="Test" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Balance Reading</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="balance_reading" class="form-control form-control-lg form-control-solid" readonly />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Today's Price</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="number" id="todays_price" class="form-control form-control-lg form-control-solid" placeholder="Today's Price" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Total Amount for the Sale</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="total_amount" class="form-control form-control-lg form-control-solid" readonly />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Collected Amount</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="collected_amount" class="form-control form-control-lg form-control-solid" placeholder="Total Amount for the Day" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Total Consumption</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="consumption" class="form-control form-control-lg form-control-solid" readonly />
-									</div>
-								  </div>
+                            
+                                <!-- Popup Modal -->
+                                <div id="popup-overlay" class="popup-overlay">
+                                    <div class="popup">
+                                        <h3>Select a Product</h3>
+                                        <table>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Unit Price</th>
+                                            </tr>
+                                            <tr>
+                                                <td><button class="btn-simple" onclick="selectProduct('Petrol Can', 50, event)">Petrol Can</button></td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr>
+                                                <td><button class="btn-simple" onclick="selectProduct('Diesel Drum', 80, event)">Diesel Drum</button></td>
+                                                <td>80</td>
+                                            </tr>
+                                            <tr>
+                                                <td><button class="btn-simple" onclick="selectProduct('Lubricant Oil', 120, event)">Lubricant Oil</button></td>
+                                                <td>120</td>
+                                            </tr>
+                                        </table>
+                                        <button class="btn-simple" onclick="closePopup()">Close</button>
+                                    </div>
+                                </div>
+                                <style>
+                                    /* Popup overlay styling */
+                                    .popup-overlay {
+                                        position: fixed;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(0, 0, 0, 0.6);
+                                        display: none;
+                                        justify-content: center;
+                                        align-items: center;
+                                        z-index: 999;
+                                    }
+                                    
+                                    /* Popup content styling */
+                                    .popup {
+                                        background: #fff;
+                                        padding: 20px;
+                                        border-radius: 10px;
+                                        width: 350px;
+                                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                        text-align: center;
+                                    }
+                            
+                                    /* Table inside popup */
+                                    .popup table {
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                        margin-bottom: 10px;
+                                    }
+                            
+                                    .popup th, .popup td {
+                                        padding: 10px;
+                                        text-align: center;
+                                    }
+                            
+                                    .popup th {
+                                        background-color: #f2f2f2;
+                                    }
+                            
+                                    /* Button styling */
+                                    .popup button {
+                                        padding: 8px 15px;
+                                        background-color: #007BFF;
+                                        color: white;
+                                        border: none;
+                                        border-radius: 8px;
+                                        cursor: pointer;
+                                        font-size: 16px;
+                                        transition: background-color 0.3s ease;
+                                        margin: 5px;
+                                    }
+                            
+                                    .popup button:hover {
+                                        background-color: #0056b3;
+                                    }
+                            
+                                    /* Form container styling */
+                                    .form-container {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 15px;
+                                    }
+                            
+                                    .form-container input, .form-container button {
+                                        padding: 12px;
+                                        font-size: 16px;
+                                        border: 1px solid #ccc;
+                                        border-radius: 8px;
+                                    }
+                            
+                                   
+                            
+                                    /* Simple and attractive button for product selection */
+                                    .btn-simple {
+                                        padding: 8px 15px;
+                                        background-color: #f8f9fa;
+                                        color: #007BFF;
+                                        border: 1px solid #007BFF;
+                                        border-radius: 8px;
+                                        cursor: pointer;
+                                        font-size: 14px;
+                                        transition: all 0.3s ease;
+                                    }
+                            
+                                    .btn-simple:hover {
+                                        background-color: #007BFF;
+                                        color: white;
+                                    }
+                            
+                                    .btn-simple:focus {
+                                        outline: none;
+                                    }
+                                </style>
+                                <script>
+                                    // Calculate total amount based on quantity and unit price
+                                    function calculateTotal() {
+                                        const quantity = document.getElementById("quantity").value;
+                                        const unitPrice = document.getElementById("unit_price").value;
+                                        const totalAmount = document.getElementById("total_amount");
+                            
+                                        if (quantity && unitPrice) {
+                                            totalAmount.value = (parseFloat(quantity) * parseFloat(unitPrice)).toFixed(2);
+                                        } else {
+                                            totalAmount.value = "";
+                                        }
+                                    }
+                            
+                                    // Open the product selection popup
+                                    function openPopup(event) {
+                                        event.preventDefault(); // Prevent page reload
+                                        document.getElementById("popup-overlay").style.display = "flex";
+                                    }
+                            
+                                    // Close the product selection popup
+                                    function closePopup() {
+                                        document.getElementById("popup-overlay").style.display = "none";
+                                    }
+                            
+                                    // Fill the form with selected product data
+                                    function selectProduct(productName, unitPrice, event) {
+                                        event.preventDefault(); // Prevent page reload when selecting a product
+                                        document.getElementById("product_name").value = productName;
+                                        document.getElementById("unit_price").value = unitPrice;
+                                        document.getElementById("quantity").value = ""; // Allow user to input quantity
+                                        calculateTotal(); // Update total based on selected product
+                                        closePopup(); // Close the popup after selection
+                                    }
+                                </script>
+                            
 
 								  <div class="row mb-6">
 									<label for="payment_method_petrol" class="col-lg-4 col-form-label fw-semibold fs-6">Payment Method</label>
@@ -661,254 +749,7 @@
 								  </script>
 								  
 								  
-								  <script>
-									// Set today's date automatically
-									document.addEventListener("DOMContentLoaded", function () {
-  // Set today's date automatically
-  const dateInput = document.getElementById("start_reading_petrol");
-  dateInput.value = new Date().toISOString().split("T")[0];
-
-  // Recalculate values on input change
-  const startReadingInput = document.getElementById("start_reading");
-  const endReadingInput = document.getElementById("end_reading");
-  const testInput = document.getElementById("test");
-  const todaysPriceInput = document.getElementById("todays_price");
-  const balanceReadingInput = document.getElementById("balance_reading");
-  const consumptionInput = document.getElementById("consumption");
-  const totalAmountInput = document.getElementById("total_amount");
-
-  function recalculate() {
-    const startReading = parseFloat(startReadingInput.value) || 0;
-    const endReading = parseFloat(endReadingInput.value) || 0;
-    const test = parseFloat(testInput.value) || 0;
-    const todaysPrice = parseFloat(todaysPriceInput.value) || 0;
-
-    // Balance Reading = End Reading - Start Reading
-    const balanceReading = endReading - startReading;
-    balanceReadingInput.value = balanceReading.toFixed(2);
-
-    // Total Consumption = Balance Reading - Test
-    const totalConsumption = balanceReading - test;
-    consumptionInput.value = totalConsumption.toFixed(2);
-
-    // Total Amount = Total Consumption * Today's Price
-    const totalAmount = totalConsumption * todaysPrice;
-    totalAmountInput.value = totalAmount.toFixed(2);
-  }
-
-  // Event listeners for recalculation
-  [startReadingInput, endReadingInput, testInput, todaysPriceInput].forEach(input => {
-    input.addEventListener("input", recalculate);
-  });
-
-  // Reset stock button functionality
-  const resetStockButton = document.getElementById("reset_stock");
-  const stockAvailableInput = document.getElementById("stock_available");
-  const newStockInput = document.getElementById("new_stock");
-  resetStockButton.addEventListener("click", function () {
-    stockAvailableInput.value = "100"; // Default stock value
-    newStockInput.value = "";
-  });
-
-  newStockInput.addEventListener("input", function () {
-    const newStock = parseFloat(newStockInput.value) || 0;
-    stockAvailableInput.value = (100 + newStock).toFixed(2); // Default + new stock
-  });
-});
-
-								  </script>
-								  
-
-								
-						<button type="submit" class="btn btn-primary">Save</button>
-                            </div>
-                            <!--end::Card body-->
-                        </form><br>
-
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div id="kt_account_settings_profile_details" class="collapse show">
-                        <!--begin::Form-->
-                        <form id="kt_account_profile_details_form" class="form">
-                            <!--begin::Card body-->
-                            <div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
-                                <!--begin::Input group-->
-                                <div class="row mb-6">
-                                    <!--begin::Label-->
-                                    <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Diesel</h1>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Input group-->
-
-                                <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Date</label>
-									<div class="col-lg-8 fv-row">
-										<input type="date" id="start_reading_diesel_date" class="form-control form-control-lg form-control-solid" value="" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Pump</label>
-									<div class="col-lg-8 fv-row">
-										<select id="time_of_day_diesel" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
-											<option value="pump1">Pump 1</option>
-											<option value="pump2">Pump 2</option>
-										</select>
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Stock Available</label>
-									<div class="col-lg-6 fv-row">
-										<input type="text" id="stock_available_diesel" class="form-control form-control-lg form-control-solid" value="100" readonly />
-									</div>
-									<div class="col-lg-2">
-										<button id="reset_stock_diesel" class="btn btn-warning">Reset</button>
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">New Stock</label>
-									<div class="col-lg-8 fv-row">
-										<input type="number" id="new_stock_diesel" class="form-control form-control-lg form-control-solid" placeholder="New Stock" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Start Reading</label>
-									<div class="col-lg-8 fv-row">
-										<input type="number" id="start_reading_diesel" class="form-control form-control-lg form-control-solid" placeholder="Start Reading" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">End Reading</label>
-									<div class="col-lg-8 fv-row">
-										<input type="number" id="end_reading_diesel" class="form-control form-control-lg form-control-solid" placeholder="End Reading" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Test</label>
-									<div class="col-lg-8 fv-row">
-										<input type="number" id="test_diesel" class="form-control form-control-lg form-control-solid" placeholder="Test" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Balance Reading</label>
-									<div class="col-lg-8 fv-row">
-										<input type="text" id="balance_reading_diesel" class="form-control form-control-lg form-control-solid" readonly />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Today's Price</label>
-									<div class="col-lg-8 fv-row">
-										<input type="number" id="todays_price_diesel" class="form-control form-control-lg form-control-solid" placeholder="Today's Price" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Total Amount for the Sale</label>
-									<div class="col-lg-8 fv-row">
-										<input type="text" id="total_amount_diesel" class="form-control form-control-lg form-control-solid" readonly />
-									</div>
-								</div>
-
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Collected Amount</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="collected_amount_diesel" class="form-control form-control-lg form-control-solid" placeholder="Total Amount for the Day" />
-									</div>
-								  </div>
-
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Total Consumption</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="consumption_diesel" class="form-control form-control-lg form-control-solid" readonly />
-									</div>
-								  </div>
-
-								<div class="row mb-6">
-									<label for="payment_method_diesel" class="col-lg-4 col-form-label fw-semibold fs-6">Payment Method</label>
-									<div class="col-lg-8 fv-row">
-									  <select id="payment_method_diesel" class="form-control form-control-lg form-control-solid" onchange="handlePaymentMethodChangediesel(this)">
-										<option value="cash">Cash</option>
-										<option value="card">Card</option>
-										<option value="online">Online</option>
-										<option value="credit">Credit</option>
-									  </select>
-									</div>
-								  </div>
-								  
-								  <script>
-									function handlePaymentMethodChangediesel(select) {
-									  if (select.value === "credit") {
-										window.location.href = "credit.html";
-									  }
-									}
-								  </script>
-								
-								<script>
-									// Set today's date automatically
-									document.getElementById('start_reading_diesel_date').value = new Date().toISOString().split('T')[0];
-								
-									// Diesel calculations
-									function calculateDiesel() {
-										const startReading = parseFloat(document.getElementById("start_reading_diesel").value) || 0;
-										const endReading = parseFloat(document.getElementById("end_reading_diesel").value) || 0;
-										const test = parseFloat(document.getElementById("test_diesel").value) || 0;
-										const price = parseFloat(document.getElementById("todays_price_diesel").value) || 0;
-								
-										const balanceReading = endReading - startReading;
-										const consumption = balanceReading - test;
-										const totalAmount = consumption * price;
-								
-										document.getElementById("balance_reading_diesel").value = balanceReading.toFixed(2);
-										document.getElementById("consumption_diesel").value = consumption.toFixed(2);
-										document.getElementById("total_amount_diesel").value = totalAmount.toFixed(2);
-									}
-								
-									// Event listeners for diesel inputs
-									document.getElementById("start_reading_diesel").addEventListener("input", calculateDiesel);
-									document.getElementById("end_reading_diesel").addEventListener("input", calculateDiesel);
-									document.getElementById("test_diesel").addEventListener("input", calculateDiesel);
-									document.getElementById("todays_price_diesel").addEventListener("input", calculateDiesel);
-								
-									// Reset stock for diesel
-									document.getElementById("reset_stock_diesel").addEventListener("click", function () {
-										document.getElementById("stock_available_diesel").value = 100;
-									});
-								</script>
-								
-								<div class="row mb-4">
-									<div class="col-lg-8 fv-row">
-						<button type="submit" class="btn btn-primary">Save</button>
-						</div>
-						</div>
-                            </div>
-                            <!--end::Card body-->
-                        </form><br>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-							
-
-
-
-
-
-			
-<div class="row" id="product-section">
-	<div class="col-12">
-		<div style="margin: 20px auto; width: 102%; border-radius: 13px; padding: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+		<div >
 			<div class="table-responsive">
 				<table class="table" style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; color: #333;">
 					<label for=""><h1>cash</h1></label>

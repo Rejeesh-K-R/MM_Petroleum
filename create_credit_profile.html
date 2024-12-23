@@ -5,7 +5,7 @@
 
 <head>
     <base href="" />
-    <title>Credit</title>
+    <title>Credit Profile</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:locale" content="en_US" />
@@ -361,7 +361,7 @@
                                     <!--begin:Menu item-->
                                     <div class="menu-item">
                                         <!--begin:Menu link-->
-                                        <a class="menu-link " href="../MM_petroleums/index.html">
+                                        <a class="menu-link active" href="../MM_petroleums/index.html">
                                             <span class="menu-icon">
                                                 <span><i class="fa-solid fa-gas-pump"></i></span>
                                             </span>
@@ -392,8 +392,9 @@
                                         <!--end:Menu link-->
                                     </div>
 
+
                                     <div class="menu-item">
-                                        <a class="menu-link  " href="../MM_petroleums/create_credit_profile.html"
+                                        <a class="menu-link active " href="../MM_petroleums/create_credit_profile.html"
                                             data-kt-page="pro">
                                             <span class="menu-icon">
                                                 <span><i class="fa-solid fa-credit-card"></i></span>
@@ -403,7 +404,7 @@
                                     </div>
 
 									<div class="menu-item">
-                                        <a class="menu-link active " href="../MM_petroleums/credit.html"
+                                        <a class="menu-link  " href="../MM_petroleums/credit.html"
                                             data-kt-page="pro">
                                             <span class="menu-icon">
                                                 <span><i class="fa-solid fa-credit-card"></i></span>
@@ -592,109 +593,54 @@
 													<!--end::Input group-->
 													<!--begin::Input group-->
 													<div class="row mb-6">
-                                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Full Name</label>
-                                                        <div class="col-lg-8">
-                                                            <div class="row">
-                                                                <div class="col-lg-6 fv-row">
-                                                                    <input type="text" id="fname" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" />
-                                                                </div>
-                                                                <div class="col-lg-6 fv-row">
-                                                                    <input type="text" id="lname" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-6">
-                                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Address</label>
-                                                        <div class="col-lg-8 fv-row">
-                                                            <input type="text" id="address" name="company" class="form-control form-control-lg form-control-solid" placeholder="Street City State" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-6">
-                                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                                            <span class="required">Contact Phone</span>
-                                                        </label>
-                                                        <div class="col-lg-8 fv-row">
-                                                            <input type="tel" id="phone" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" />
-                                                        
-                                                            <span>Select an existing profile</span>
-<button type="button" class="btn btn-link" onclick="openPopup()">Choose Profile</button>
-
-
-<!-- Popup Modal -->
-<div id="profilePopup" class="modal" style="display: none;">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Select a Profile</h5>
-                <button type="button" class="btn-close" onclick="closePopup()"></button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-group">
-                    <li class="list-group-item" onclick="selectProfile('John', 'Doe', '123 Street, City, State', '123-456-7890')">
-                        <strong>John Doe</strong> - 123-456-7890
-                    </li>
-                    <li class="list-group-item" onclick="selectProfile('Jane', 'Smith', '456 Avenue, Town, Province', '987-654-3210')">
-                        <strong>Jane Smith</strong> - 987-654-3210
-                    </li>
-                    <li class="list-group-item" onclick="selectProfile('Max', 'Brown', '789 Boulevard, Metropolis, Region', '555-123-4567')">
-                        <strong>Max Brown</strong> - 555-123-4567
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" onclick="closePopup()">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    function openPopup() {
-        document.getElementById('profilePopup').style.display = 'block';
-    }
-
-    function closePopup() {
-        document.getElementById('profilePopup').style.display = 'none';
-    }
-
-    function selectProfile(firstName, lastName, address, phone) {
-        document.getElementById('fname').value = firstName;
-        document.getElementById('lname').value = lastName;
-        document.getElementById('address').value = address;
-        document.getElementById('phone').value = phone;
-        closePopup();
-    }
-</script>
-<style>
-    .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal-dialog {
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        max-width: 500px;
-        width: 100%;
-    }
-
-    .modal-header, .modal-footer {
-        padding: 15px;
-    }
-
-    .modal-body {
-        padding: 15px;
-    }
-</style>
+														<!--begin::Label-->
+														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Full Name</label>
+														<!--end::Label-->
+														<!--begin::Col-->
+														<div class="col-lg-8">
+															<!--begin::Row-->
+															<div class="row">
+																<!--begin::Col-->
+																<div class="col-lg-6 fv-row">
+																	<input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="Max" />
+																</div>
+																<!--end::Col-->
+																<!--begin::Col-->
+																<div class="col-lg-6 fv-row">
+																	<input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="Smith" />
+																</div>
+																<!--end::Col-->
+															</div>
+															<!--end::Row-->
+														</div>
+														<!--end::Col-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="row mb-6">
+														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Address</label>
+														<div class="col-lg-8 fv-row">
+															<input type="text" name="company" class="form-control form-control-lg form-control-solid" placeholder="Street City State" value="Street City State" />
+														</div>
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="row mb-6">
+														<!--begin::Label-->
+														<label class="col-lg-4 col-form-label fw-semibold fs-6">
+															<span class="required">Contact Phone</span>
+															<span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
+																<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																	<span class="path1"></span>
+																	<span class="path2"></span>
+																	<span class="path3"></span>
+																</i>
+															</span>
+														</label>
+														<!--end::Label-->
+														<!--begin::Col-->
+														<div class="col-lg-8 fv-row">
+															<input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="044 3276 454 935" />
 														</div>
 														<!--end::Col-->
 													</div>
@@ -716,25 +662,18 @@
 
 
                                                     <div class="row mb-6">
-														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Liters</label>
+														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Email</label>
 														<div class="col-lg-8 fv-row">
-															<input type="text" name="company" class="form-control form-control-lg form-control-solid" placeholder="Liters" value="" />
+															<input type="text" name="email" class="form-control form-control-lg form-control-solid" placeholder="Example@gmail.com" value="" />
 														</div>
 													</div>
 
-                                                    <div class="row mb-6">
+                                                    <!-- <div class="row mb-6">
 														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Amount</label>
 														<div class="col-lg-8 fv-row">
 															<input type="text" name="company" class="form-control form-control-lg form-control-solid" placeholder="Street City State" value="1000" />
 														</div>
-													</div>
-
-                                                    <div class="row mb-6">
-														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Due Date</label>
-														<div class="col-lg-8 fv-row">
-															<input type="date" name="company" class="form-control form-control-lg form-control-solid" placeholder="Street City State" value="" />
-														</div>
-													</div>
+													</div> -->
 													<!--begin::Input group-->
 													<!-- <div class="row mb-6">
 														<label class="col-lg-4 col-form-label fw-semibold fs-6">
