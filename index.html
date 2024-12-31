@@ -403,7 +403,34 @@
                                         <!--end:Menu link-->
                                     </div>
 
+									<div class="menu-item">
+                                        <a class="menu-link  " href="../MM_petroleums/create_employee_profile.html"
+                                            data-kt-page="pro">
+                                            <span class="menu-icon">
+                                                <span><i class="fa-solid fa-user"></i></span>
+                                            </span>
+                                            <span class="menu-title">Create Employee Profile
+                                        </a>
+                                    </div>
 
+									<div class="menu-item">
+                                        <a class="menu-link  " href="pages/employee_profile.html"
+                                            data-kt-page="pro">
+                                            <span class="menu-icon">
+                                                <span><i class="fa-solid fa-address-book"></i></span>
+                                            </span>
+                                            <span class="menu-title">Employee Profile
+                                        </a>
+                                    </div>
+
+									<div class="menu-item">
+                                        <a class="menu-link " href="apps/subscriptions/employee_manage.html" data-kt-page="pro">
+                                            <span class="menu-icon">
+                                                <span><i class="fa-solid fa-users"></i></span>
+                                            </span>
+                                            <span class="menu-title">Manage Employee
+                                        </a>
+                                    </div>
 
                                     <!--begin:Menu item-->
 										<div class="menu-item">
@@ -475,42 +502,61 @@
 								<div id="kt_app_toolbar_container" class="app-container container-fluid d-flex align-items-stretch">
 									<!--begin::Toolbar wrapper-->
 									<div class="app-toolbar-wrapper d-flex flex-stack flex-wrap gap-4 w-100">
-										<!--begin::Page title-->
-										<!--Upload Image-->
-
-
-										<!-- <div class="page-title d-flex flex-column gap-1 me-3 mb-2" style="position: relative; width: fit-content;">
-											<img src="assets/media/misc/bg-2.jpg" style="width: 150px; padding: 10px; border-radius: 18px;" alt="Invoice upload image">
 										
-											<button class="btn-plus" style="position: absolute; bottom: 10px; right: 10px; background-color: #28a745; border: none; border-radius: 15%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 24px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer; transition: background-color 0.3s, transform 0.3s;">
-												+
-											</button>
-											<input type="file" id="uploadImage" style="display: none;" />
-										</div> -->
-
-
-										<!--end::Page title-->
-
-
-										<!-- <div class="col-lg-3 col-md-4 col-12 text-center mb-3">
-											<div class="d-flex flex-column">
-												<h5 class="fw-semibold fs-6 mb-2">Invoice Number</h5>
-												<input type="text" class="form-control form-control-lg form-control-solid" name="invoice_number" placeholder="#00228383" value="#00228383">
+										<div class="row w-100">											<div class="col-lg-3 col-md-4 col-12 text-md-end text-center mb-3">
+												<div class="d-flex flex-column align-items-center">
+													<h5 class="fw-semibold fs-6 mb-2">Morning/Evening</h5>
+													<select class="form-select form-select-solid" name="invoice_type" data-control="select2" data-hide-search="true" data-placeholder="Morning/Evening" data-kt-ecommerce-product-filter="status">
+														<option></option>
+														<option value="morning" selected>Morning</option>
+														<option value="evening">Evening</option>
+													</select>
+												</div>
 											</div>
-										</div> -->
-
-
-										<!-- Purchase/Sales Dropdown (aligned right) -->
-										<div class="col-lg-3 col-md-4 col-12 text-md-end text-center mb-3">
-											<div class="d-flex flex-column align-items-center">
-												<h5 class="fw-semibold fs-6 mb-2">Morning/Evening</h5>
-												<select class="form-select form-select-solid" name="invoice_type" data-control="select2" data-hide-search="true" data-placeholder="Morning/Evening" data-kt-ecommerce-product-filter="status">
-													<option></option>
-													<option value="morning" selected>Morning</option>
-													<option value="evening">Evening</option>
-												</select>
+										
+											<div class="col-lg-3 col-md-4 col-12 text-md-end text-center mb-3">
+												<div class="d-flex flex-column align-items-center">
+													<h5 class="fw-semibold fs-6 mb-2">Date</h5>
+													<input type="date" id="start_reading_petrol" class="form-control form-control-lg form-control-solid" />
+												</div>
+											</div>
+										
+											<div class="col-lg-3 col-md-4 col-12 text-md-end text-center mb-3">
+												<div class="d-flex flex-column align-items-center">
+													<h5 class="fw-semibold fs-6 mb-2">Name of employee</h5>
+													<select name="time_of_day_petrol" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
+														<option value="">Select</option>
+														<option value="John">John</option>
+														<option value="Stephen">Stephen</option>
+														<option value="Martin">Martin</option>
+													</select>								
+												</div>
+											</div>
+										
+											<div class="col-lg-3 col-md-4 col-12 text-md-end text-center mb-3">
+												<div class="d-flex flex-column align-items-center">
+													<h5 class="fw-semibold fs-6 mb-2">Pump No.</h5>
+													<select name="time_of_day_petrol" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
+														<option value="pump1">Pump 1</option>
+														<option value="pump2">Pump 2</option>
+													</select>
+												</div>
 											</div>
 										</div>
+										
+
+										<!-- <div class="row mb-6">
+											<div class="d-flex flex-column align-items-center">
+												<h5 class="fw-semibold fs-6 mb-2">Name</h5>
+											<div class="col-lg-8 fv-row">
+											  <select name="time_of_day_petrol" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
+												<option value="pump1">Pump 1</option>
+												<option value="pump2">Pump 2</option>
+											  </select>
+											</div>
+											</div>
+										  </div> -->
+										  
 									<!--end::Toolbar wrapper-->
 								</div>
 								<!--end::Toolbar container-->
@@ -550,22 +596,6 @@
                                 </div>
                                 <!--end::Input group-->
 
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Date</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="date" id="start_reading_petrol" class="form-control form-control-lg form-control-solid" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Pump</label>
-									<div class="col-lg-8 fv-row">
-									  <select name="time_of_day_petrol" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
-										<option value="pump1">Pump 1</option>
-										<option value="pump2">Pump 2</option>
-									  </select>
-									</div>
-								  </div>
 								  
 								  <div class="row mb-6">
 									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Stock Available</label>
@@ -627,20 +657,13 @@
 								  </div>
 								  
 								  <div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Collected Amount</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="collected_amount" class="form-control form-control-lg form-control-solid" placeholder="Total Amount for the Day" />
-									</div>
-								  </div>
-								  
-								  <div class="row mb-6">
 									<label class="col-lg-4 col-form-label fw-semibold fs-6">Total Consumption</label>
 									<div class="col-lg-8 fv-row">
 									  <input type="text" id="consumption" class="form-control form-control-lg form-control-solid" readonly />
 									</div>
 								  </div>
 
-								  <div class="row mb-6">
+								  <!-- <div class="row mb-6">
 									<label for="payment_method_petrol" class="col-lg-4 col-form-label fw-semibold fs-6">Payment Method</label>
 									<div class="col-lg-8 fv-row">
 									  <select id="payment_method_petrol" class="form-control form-control-lg form-control-solid" onchange="handlePaymentMethodChange(this)">
@@ -658,69 +681,13 @@
 										window.location.href = "credit.html";
 									  }
 									}
-								  </script>
+								  </script> -->
 								  
 								  
-								  <script>
-									// Set today's date automatically
-									document.addEventListener("DOMContentLoaded", function () {
-  // Set today's date automatically
-  const dateInput = document.getElementById("start_reading_petrol");
-  dateInput.value = new Date().toISOString().split("T")[0];
-
-  // Recalculate values on input change
-  const startReadingInput = document.getElementById("start_reading");
-  const endReadingInput = document.getElementById("end_reading");
-  const testInput = document.getElementById("test");
-  const todaysPriceInput = document.getElementById("todays_price");
-  const balanceReadingInput = document.getElementById("balance_reading");
-  const consumptionInput = document.getElementById("consumption");
-  const totalAmountInput = document.getElementById("total_amount");
-
-  function recalculate() {
-    const startReading = parseFloat(startReadingInput.value) || 0;
-    const endReading = parseFloat(endReadingInput.value) || 0;
-    const test = parseFloat(testInput.value) || 0;
-    const todaysPrice = parseFloat(todaysPriceInput.value) || 0;
-
-    // Balance Reading = End Reading - Start Reading
-    const balanceReading = endReading - startReading;
-    balanceReadingInput.value = balanceReading.toFixed(2);
-
-    // Total Consumption = Balance Reading - Test
-    const totalConsumption = balanceReading - test;
-    consumptionInput.value = totalConsumption.toFixed(2);
-
-    // Total Amount = Total Consumption * Today's Price
-    const totalAmount = totalConsumption * todaysPrice;
-    totalAmountInput.value = totalAmount.toFixed(2);
-  }
-
-  // Event listeners for recalculation
-  [startReadingInput, endReadingInput, testInput, todaysPriceInput].forEach(input => {
-    input.addEventListener("input", recalculate);
-  });
-
-  // Reset stock button functionality
-  const resetStockButton = document.getElementById("reset_stock");
-  const stockAvailableInput = document.getElementById("stock_available");
-  const newStockInput = document.getElementById("new_stock");
-  resetStockButton.addEventListener("click", function () {
-    stockAvailableInput.value = "100"; // Default stock value
-    newStockInput.value = "";
-  });
-
-  newStockInput.addEventListener("input", function () {
-    const newStock = parseFloat(newStockInput.value) || 0;
-    stockAvailableInput.value = (100 + newStock).toFixed(2); // Default + new stock
-  });
-});
-
-								  </script>
+								  
 								  
 
 								
-						<button type="submit" class="btn btn-primary">Save</button>
                             </div>
                             <!--end::Card body-->
                         </form><br>
@@ -740,25 +707,7 @@
                                     <h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Diesel</h1>
                                     <!--end::Label-->
                                 </div>
-                                <!--end::Input group-->
 
-                                <div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Date</label>
-									<div class="col-lg-8 fv-row">
-										<input type="date" id="start_reading_diesel_date" class="form-control form-control-lg form-control-solid" value="" />
-									</div>
-								</div>
-								
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Pump</label>
-									<div class="col-lg-8 fv-row">
-										<select id="time_of_day_diesel" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0">
-											<option value="pump1">Pump 1</option>
-											<option value="pump2">Pump 2</option>
-										</select>
-									</div>
-								</div>
-								
 								<div class="row mb-6">
 									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Stock Available</label>
 									<div class="col-lg-6 fv-row">
@@ -818,76 +767,13 @@
 									</div>
 								</div>
 
-								<div class="row mb-6">
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">Collected Amount</label>
-									<div class="col-lg-8 fv-row">
-									  <input type="text" id="collected_amount_diesel" class="form-control form-control-lg form-control-solid" placeholder="Total Amount for the Day" />
-									</div>
-								  </div>
-
 								  <div class="row mb-6">
 									<label class="col-lg-4 col-form-label fw-semibold fs-6">Total Consumption</label>
 									<div class="col-lg-8 fv-row">
 									  <input type="text" id="consumption_diesel" class="form-control form-control-lg form-control-solid" readonly />
 									</div>
-								  </div>
-
-								<div class="row mb-6">
-									<label for="payment_method_diesel" class="col-lg-4 col-form-label fw-semibold fs-6">Payment Method</label>
-									<div class="col-lg-8 fv-row">
-									  <select id="payment_method_diesel" class="form-control form-control-lg form-control-solid" onchange="handlePaymentMethodChangediesel(this)">
-										<option value="cash">Cash</option>
-										<option value="card">Card</option>
-										<option value="online">Online</option>
-										<option value="credit">Credit</option>
-									  </select>
-									</div>
-								  </div>
-								  
-								  <script>
-									function handlePaymentMethodChangediesel(select) {
-									  if (select.value === "credit") {
-										window.location.href = "credit.html";
-									  }
-									}
-								  </script>
+								  </div>	
 								
-								<script>
-									// Set today's date automatically
-									document.getElementById('start_reading_diesel_date').value = new Date().toISOString().split('T')[0];
-								
-									// Diesel calculations
-									function calculateDiesel() {
-										const startReading = parseFloat(document.getElementById("start_reading_diesel").value) || 0;
-										const endReading = parseFloat(document.getElementById("end_reading_diesel").value) || 0;
-										const test = parseFloat(document.getElementById("test_diesel").value) || 0;
-										const price = parseFloat(document.getElementById("todays_price_diesel").value) || 0;
-								
-										const balanceReading = endReading - startReading;
-										const consumption = balanceReading - test;
-										const totalAmount = consumption * price;
-								
-										document.getElementById("balance_reading_diesel").value = balanceReading.toFixed(2);
-										document.getElementById("consumption_diesel").value = consumption.toFixed(2);
-										document.getElementById("total_amount_diesel").value = totalAmount.toFixed(2);
-									}
-								
-									// Event listeners for diesel inputs
-									document.getElementById("start_reading_diesel").addEventListener("input", calculateDiesel);
-									document.getElementById("end_reading_diesel").addEventListener("input", calculateDiesel);
-									document.getElementById("test_diesel").addEventListener("input", calculateDiesel);
-									document.getElementById("todays_price_diesel").addEventListener("input", calculateDiesel);
-								
-									// Reset stock for diesel
-									document.getElementById("reset_stock_diesel").addEventListener("click", function () {
-										document.getElementById("stock_available_diesel").value = 100;
-									});
-								</script>
-								
-								<div class="row mb-4">
-									<div class="col-lg-8 fv-row">
-						<button type="submit" class="btn btn-primary">Save</button>
-						</div>
 						</div>
                             </div>
                             <!--end::Card body-->
@@ -898,105 +784,485 @@
         </div>
 
 
+		<div id="kt_app_content" class="app-content flex-column-fluid">
+			<div id="kt_app_content_container" class="app-container container-fluid">
+				<div class="card card-flush"><div class="row">
+						<div class="col-md-12">
+							<div id="kt_account_settings_profile_details" class="collapse show">
+								<form id="kt_account_profile_details_form" class="form">
+									<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+										<div class="row mb-6">
+											<h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Amount</h1>
+										</div>
+										<!--end::Input group-->
+		
+										  
+										<div class="row mb-6">
+											<label class="col-lg-4 col-form-label required fw-semibold fs-6">Grant Total for MSD & HSD</label>
+											<div class="col-lg-5 fv-row">
+											  <input type="text" id="grand_total" class="form-control form-control-lg form-control-solid" value="0.00" placeholder="00.00" readonly />
+											</div>
+										  </div>
+										  
+										  
+										  
+										  
+																					
+										  </div>
+										  </form>
+										  </div>
+										  </div>
 
-							
 
 
+		
 
 
-
-			
-<div class="row" id="product-section">
+<div class="row" id="product-section" style="padding: 1%;">
 	<div class="col-12">
 		<div style="margin: 20px auto; width: 102%; border-radius: 13px; padding: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
 			<div class="table-responsive">
 				<table class="table" style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; color: #333;">
-					<label for=""><h1>cash</h1></label>
-					<thead>
-						<tr style="color: #000; border-radius: 13px;">
-							<th scope="col" class="required" style="font-size: 18px;">*500</th>
-							<th scope="col" class="required" style="font-size: 18px;">*200</th>
-							<th scope="col" style="font-size: 18px;">*100</th>
-							<th scope="col" style="font-size: 18px;">*50</th>
-							<th scope="col" style="font-size: 18px;">*20</th>
-							<th scope="col" style="font-size: 18px;">*10</th>
-							<th scope="col" style="font-size: 18px;">*Coins</th>
-							<th scope="col" style="font-size: 18px;">Total</th>
-						</tr>
-					</thead>
-					<tbody id="serviceTableBody">
-						<tr style="text-align: center;" class="product">
-							<td>
-								<input type="number" id="cash_500" class="form-control form-control-lg form-control-solid" placeholder="*500" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="number" id="cash_200" class="form-control form-control-lg form-control-solid" placeholder="*200" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="number" id="cash_100" class="form-control form-control-lg form-control-solid" placeholder="*100" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="number" id="cash_50" class="form-control form-control-lg form-control-solid" placeholder="*50" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="number" id="cash_20" class="form-control form-control-lg form-control-solid" placeholder="*20" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="number" id="cash_10" class="form-control form-control-lg form-control-solid" placeholder="*10" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="number" id="cash_coins" class="form-control form-control-lg form-control-solid" placeholder="Coins" style="width: 100%; padding: 8px;">
-							</td>
-							<td>
-								<input type="text" id="cash_total" class="form-control form-control-lg form-control-solid" placeholder="Total" readonly style="width: 100%; padding: 8px;">
-							</td>
-						</tr>
-					</tbody>
+					<label for=""><h1>Cash</h1></label>
+<thead>
+    <tr style="color: #000; border-radius: 13px;">
+        <th scope="col" class="" style="font-size: 18px;">*500</th>
+        <th scope="col" class="" style="font-size: 18px;">*200</th>
+        <th scope="col" style="font-size: 18px;">*100</th>
+        <th scope="col" style="font-size: 18px;">*50</th>
+        <th scope="col" style="font-size: 18px;">*20</th>
+        <th scope="col" style="font-size: 18px;">*10</th>
+        <th scope="col" style="font-size: 18px;">*Coins</th>
+        <th scope="col" style="font-size: 18px;">Total</th>
+    </tr>
+</thead>
+<tbody id="serviceTableBody">
+    <tr style="text-align: center;" class="product">
+        <td><input type="number" id="cash_500"  class="form-control form-control-lg form-control-solid"  placeholder="*500" style="width: 100%; padding: 8px;"></td>
+        <td><input type="number" id="cash_200"  class="form-control form-control-lg form-control-solid"  placeholder="*200" style="width: 100%; padding: 8px;"></td>
+        <td><input type="number" id="cash_100"  class="form-control form-control-lg form-control-solid" placeholder="*100" style="width: 100%; padding: 8px;"></td>
+        <td><input type="number" id="cash_50" class="form-control form-control-lg form-control-solid" placeholder="*50" style="width: 100%; padding: 8px;"></td>
+        <td><input type="number" id="cash_20" class="form-control form-control-lg form-control-solid" placeholder="*20" style="width: 100%; padding: 8px;"></td>
+        <td><input type="number" id="cash_10" class="form-control form-control-lg form-control-solid" placeholder="*10" style="width: 100%; padding: 8px;"></td>
+        <td><input type="number" id="cash_coins" class="form-control form-control-lg form-control-solid" placeholder="Coins" style="width: 100%; padding: 8px;"></td>
+        <td><input type="text" id="cash_total" class="form-control form-control-lg form-control-solid" placeholder="Total" readonly style="width: 100%; padding: 8px;"></td>
+    </tr>
+</tbody>
 				</table>
-				<div class="row mb-4">
-					<div class="col-lg-8 fv-row">
-		<button type="submit" class="btn btn-primary">Save</button>
-		</div>
 			</div>
-			
-			<script>
-				// Calculate total for cash denominations
-				function calculateCashTotal() {
-					const cash500 = (parseInt(document.getElementById("cash_500").value) || 0) * 500;
-					const cash200 = (parseInt(document.getElementById("cash_200").value) || 0) * 200;
-					const cash100 = (parseInt(document.getElementById("cash_100").value) || 0) * 100;
-					const cash50 = (parseInt(document.getElementById("cash_50").value) || 0) * 50;
-					const cash20 = (parseInt(document.getElementById("cash_20").value) || 0) * 20;
-					const cash10 = (parseInt(document.getElementById("cash_10").value) || 0) * 10;
-					const coins = parseInt(document.getElementById("cash_coins").value) || 0;
-			
-					const total = cash500 + cash200 + cash100 + cash50 + cash20 + cash10 + coins;
-					document.getElementById("cash_total").value = total.toFixed(2);
-				}
-			
-				// Add event listeners to all cash inputs
-				document.getElementById("cash_500").addEventListener("input", calculateCashTotal);
-				document.getElementById("cash_200").addEventListener("input", calculateCashTotal);
-				document.getElementById("cash_100").addEventListener("input", calculateCashTotal);
-				document.getElementById("cash_50").addEventListener("input", calculateCashTotal);
-				document.getElementById("cash_20").addEventListener("input", calculateCashTotal);
-				document.getElementById("cash_10").addEventListener("input", calculateCashTotal);
-				document.getElementById("cash_coins").addEventListener("input", calculateCashTotal);
-			</script>
-							
-									
-									
-							
-							
-							
-										
-										<!--end::Nav-->
-										
-					</div>
-					<!--end::Content container-->
-				</div>
-				<!--end::Content-->
+		</div></div></div></div></div></div>
+
+<!-- Additional Fields for Card and Online -->
+<div class="row" style="padding: 2%;">
+	<div class="col-md-12">
+		<div class="">
+			<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+				<!-- <div class="row mb-6"> -->
+<label for=""><h1>Card</h1></label>
+<div class="row mb-6">
+    <label class="col-lg-4 col-form-label fw-semibold fs-6">Number of Card Payments</label>
+    <div class="col-lg-8 fv-row">
+        <input type="number" class="form-control" placeholder="Card Amount">
+    </div></div>
+<div class="row mb-6">
+    <label class="col-lg-4 col-form-label fw-semibold fs-6">Card Amount</label>
+    <div class="col-lg-8 fv-row">
+        <input type="number" id="card_amount" class="form-control" placeholder="Card Amount">
+    </div>
+</div>
+</div></div></div></div>
+<div class="row" style="padding: 2%;">
+	<div class="col-md-12" >
+		<div class="">
+			<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+				<div class="row mb-6">
+<label for=""><h1>Online</h1></label>
+<div class="row mb-6">
+    <label class="col-lg-4 col-form-label fw-semibold fs-6">Number of Online Payments</label>
+    <div class="col-lg-8 fv-row">
+        <input type="number" class="form-control" placeholder="Card Amount">
+    </div>
+</div>
+<div class="row mb-6">
+    <label class="col-lg-4 col-form-label fw-semibold fs-6">Online Amount</label>
+    <div class="col-lg-8 fv-row">
+        <input type="number" id="online_amount" class="form-control" placeholder="Online Amount">
+    </div>
+</div>
+</div></div></div></div></div>
+
+<!-- Collected Total -->
+<div class="row" style="padding: 2%;">
+	<div class="col-md-12">
+		<div class="">
+			<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+				<div class="row mb-6">
+					<label for=""><h1>Collected Total</h1></label>
+
+    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Collected Total for MSD & HSD</label>
+    <div class="col-lg-5 fv-row">
+        <input type="text" id="collected_total" class="form-control" value="" placeholder="00.00" readonly>
+    </div>
+</div>
+
+									  <div class="row mb-4"></div></div> </div></div>
+<div class="row" style="padding: 2%;">
+					<div class="col-md-12" id="profileSections">
+						<div class="profile-section">
+							<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+								<div class="row mb-6">
+									<h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Credit</h1>
+								</div>
+								<div class="row mb-6">
+									<label class="col-lg-4 col-form-label fw-semibold fs-6">Name</label>
+									<div class="col-lg-8 fv-row">
+										<input type="text" class="form-control form-control-lg form-control-solid name-field" placeholder="Name" />
+										<button class="btn btn-outline-primary btn-sm select-profile">Select a Profile</button>
+									</div>
+								</div>
+								<div class="row mb-6">
+									<label class="col-lg-4 col-form-label fw-semibold fs-6">Contact</label>
+									<div class="col-lg-8 fv-row">
+										<input type="number" class="form-control form-control-lg form-control-solid contact-field" placeholder="1234567890" />
+									</div>
+								</div>
+								<div class="row mb-6">
+									<label class="col-lg-4 col-form-label fw-semibold fs-6">Address</label>
+									<div class="col-lg-8 fv-row">
+										<input type="text" class="form-control form-control-lg form-control-solid address-field" placeholder="Street, City, State" />
+									</div>
+								</div>
+								<div class="row mb-6">
+									<label class="col-lg-4 col-form-label  fw-semibold fs-6">Amount Due</label>
+									<div class="col-lg-8 fv-row">
+									  <input type="number" class="form-control form-control-lg form-control-solid" placeholder="100" />
+									</div>
+								  </div>
+								  <div class="row mb-6">
+									<label class="col-lg-4 col-form-label  fw-semibold fs-6">Due Date</label>
+									<div class="col-lg-8 fv-row">
+									  <input type="date" class="form-control form-control-lg form-control-solid" placeholder="DD-MM-YYYY" />
+									</div>
+								  </div>
+								<!-- Other fields remain unchanged -->
+								<div class="row mb-6">
+									<div class="col-lg-12 d-flex justify-content-between">
+										<button type="button" class="btn btn-danger delete-section">Delete Credit</button>
+										<button type="button" class="btn btn-primary add-credits">Add Credits</button>
+									</div>
+								</div>
+							</div>
 						</div>
+					</div>
+				</div>
+				<!-- Profile Selection Modal -->
+				<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="profileModalLabel">Select a Profile</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<ul class="list-group">
+									<li class="list-group-item" data-name="John Doe" data-contact="1234567890" data-address="123 Main St">
+										John Doe
+									</li>
+									<li class="list-group-item" data-name="Jane Smith" data-contact="9876543210" data-address="456 Elm St">
+										Jane Smith
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						// *** Petrol (HSD) and Diesel (MSD) Elements ***
+						const inputs = {
+							petrol: {
+								startReading: document.getElementById("start_reading"),
+								endReading: document.getElementById("end_reading"),
+								test: document.getElementById("test"),
+								todaysPrice: document.getElementById("todays_price"),
+								balanceReading: document.getElementById("balance_reading"),
+								consumption: document.getElementById("consumption"),
+								totalAmount: document.getElementById("total_amount"),
+								stockAvailable: document.getElementById("stock_available"),
+								newStock: document.getElementById("new_stock"),
+								resetStockButton: document.getElementById("reset_stock"),
+							},
+							diesel: {
+								startReading: document.getElementById("start_reading_diesel"),
+								endReading: document.getElementById("end_reading_diesel"),
+								test: document.getElementById("test_diesel"),
+								todaysPrice: document.getElementById("todays_price_diesel"),
+								balanceReading: document.getElementById("balance_reading_diesel"),
+								consumption: document.getElementById("consumption_diesel"),
+								totalAmount: document.getElementById("total_amount_diesel"),
+								stockAvailable: document.getElementById("stock_available_diesel"),
+								newStock: document.getElementById("new_stock_diesel"),
+								resetStockButton: document.getElementById("reset_stock_diesel"),
+							},
+						};
+				
+						const grandTotalInput = document.getElementById("grand_total");
+				
+						// Recalculation Functions
+						function recalculateFuel(type) {
+							const data = inputs[type];
+							const startReading = parseFloat(data.startReading.value) || 0;
+							const endReading = parseFloat(data.endReading.value) || 0;
+							const test = parseFloat(data.test.value) || 0;
+							const todaysPrice = parseFloat(data.todaysPrice.value) || 0;
+				
+							const balanceReading = endReading - startReading;
+							const totalConsumption = balanceReading - test;
+							const totalAmount = totalConsumption * todaysPrice;
+				
+							data.balanceReading.value = balanceReading.toFixed(2);
+							data.consumption.value = totalConsumption.toFixed(2);
+							data.totalAmount.value = totalAmount.toFixed(2);
+				
+							recalculateGrandTotal();
+						}
+				
+						function recalculateGrandTotal() {
+							const petrolTotal = parseFloat(inputs.petrol.totalAmount.value) || 0;
+							const dieselTotal = parseFloat(inputs.diesel.totalAmount.value) || 0;
+							const grandTotal = petrolTotal + dieselTotal;
+							grandTotalInput.value = grandTotal.toFixed(2);
+						}
+				
+						// Event Listeners for Fuel Inputs
+						["petrol", "diesel"].forEach(type => {
+							Object.values(inputs[type]).forEach(input => {
+								if (input.tagName === "INPUT") {
+									input.addEventListener("input", () => recalculateFuel(type));
+								}
+							});
+						});
+				
+						// Stock Management
+						function resetStock(stockInput, newStockInput, defaultStock = 100) {
+							stockInput.value = defaultStock.toFixed(2);
+							newStockInput.value = "";
+						}
+				
+						function addStock(stockInput, newStockInput, originalStock = 100) {
+							const newStock = parseFloat(newStockInput.value) || 0;
+							stockInput.value = (originalStock + newStock).toFixed(2);
+						}
+				
+						// Apply Stock Management
+						["petrol", "diesel"].forEach(type => {
+							const data = inputs[type];
+							data.resetStockButton.addEventListener("click", () =>
+								resetStock(data.stockAvailable, data.newStock)
+							);
+							data.newStock.addEventListener("input", () =>
+								addStock(data.stockAvailable, data.newStock)
+							);
+						});
+				
+						// *** Cash Denominations ***
+						const cashInputs = ["cash_500", "cash_200", "cash_100", "cash_50", "cash_20", "cash_10", "cash_coins"].map(
+							id => document.getElementById(id)
+						);
+						const cashTotalInput = document.getElementById("cash_total");
+						const cardAmountInput = document.getElementById("card_amount");
+						const onlineAmountInput = document.getElementById("online_amount");
+						const collectedTotalInput = document.getElementById("collected_total");
+				
+						function calculateCashTotal() {
+							const values = [500, 200, 100, 50, 20, 10, 1];
+							const total = cashInputs.reduce(
+								(sum, input, index) => sum + (parseInt(input.value) || 0) * values[index],
+								0
+							);
+							cashTotalInput.value = total.toFixed(2);
+							calculateCollectedTotal();
+						}
+				
+						function calculateCollectedTotal() {
+							const cashTotal = parseFloat(cashTotalInput.value) || 0;
+							const cardAmount = parseFloat(cardAmountInput.value) || 0;
+							const onlineAmount = parseFloat(onlineAmountInput.value) || 0;
+							collectedTotalInput.value = (cashTotal + cardAmount + onlineAmount).toFixed(2);
+						}
+				
+						cashInputs.concat(cardAmountInput, onlineAmountInput).forEach(input =>
+							input.addEventListener("input", calculateCashTotal)
+						);
+				
+						// *** Profile Sections ***
+						const profileSections = document.getElementById("profileSections");
+						const collectedTotalElement = document.getElementById("collectedTotal");
+				
+						function calculateTotalDue() {
+							let total = 0;
+							document.querySelectorAll(".profile-section").forEach(section => {
+								const amountInput = section.querySelector("input[placeholder='100']");
+								if (amountInput && amountInput.value) {
+									total += parseFloat(amountInput.value) || 0;
+								}
+							});
+							collectedTotalElement.textContent = `Total Due Amount: ${total.toFixed(2)}`;
+						}
+				
+						function addNewSection() {
+							const section = document.querySelector(".profile-section").cloneNode(true);
+							section.querySelectorAll("input").forEach(input => (input.value = ""));
+							profileSections.appendChild(section);
+							calculateTotalDue();
+						}
+				
+						document.body.addEventListener("click", function (e) {
+							if (e.target.classList.contains("add-credits")) {
+								addNewSection();
+							}
+							if (e.target.classList.contains("delete-section")) {
+								const section = e.target.closest(".profile-section");
+								if (section) {
+									section.remove();
+									calculateTotalDue();
+								}
+							}
+						});
+				
+						document.body.addEventListener("click", function (e) {
+							if (e.target.classList.contains("select-profile")) {
+								const currentSection = e.target.closest(".profile-section");
+								const modal = new bootstrap.Modal(document.getElementById("profileModal"));
+								modal.show();
+				
+								document.getElementById("profileModal").addEventListener("click", function (event) {
+									if (event.target.tagName === "LI") {
+										const name = event.target.dataset.name;
+										const contact = event.target.dataset.contact;
+										const address = event.target.dataset.address;
+				
+										currentSection.querySelector(".name-field").value = name;
+										currentSection.querySelector(".contact-field").value = contact;
+										currentSection.querySelector(".address-field").value = address;
+				
+										modal.hide();
+									}
+								});
+							}
+						});
+				
+						document.body.addEventListener("input", function (e) {
+							if (e.target.placeholder === "100") {
+								calculateTotalDue();
+							}
+						});
+				
+						// Initial Calculations
+						recalculateFuel("petrol");
+						recalculateFuel("diesel");
+						calculateCashTotal();
+					});
+				</script>
+				
+					
+					<div id="kt_app_content" class="app-content flex-column-fluid">
+						<div id="kt_app_content_container" class="app-container container-fluid">
+							<div class="card card-flush">
+								<div class="row">
+									<div class="col-md-12">
+										<div id="kt_account_settings_profile_details" class="collapse show">
+											<form id="kt_account_profile_details_form" class="form">
+												<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+													<div class="row mb-6">
+														<h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Collected Total</h1>
+													</div>
+													<div class="row mb-6">
+														<label class="col-lg-4 col-form-label required fw-semibold fs-6">Collected Total for MSD & HSD</label>
+														<div class="col-lg-8 fv-row" id="collectedTotal">
+															Total Due Amount: 0.00
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				<div id="kt_app_content" class="app-content flex-column-fluid">
+					<div id="kt_app_content_container" class="app-container container-fluid">
+						<div class="card card-flush"><div class="row">
+								<div class="col-md-12">
+									<div id="kt_account_settings_profile_details" class="collapse show">
+										<form id="kt_account_profile_details_form" class="form">
+											<div class="card-body border-top p-9" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 13px; padding: 10px;">
+												<div class="row mb-6">
+													<h1 class="page-heading d-flex flex-column justify-content-center text-dark fw-bolder fs-1 lh-0">Collected Total</h1>
+												</div>
+												  <div class="row mb-6">
+													<label class="col-lg-4 col-form-label required fw-semibold fs-6">Collected Total for MSD & HSD</label>
+<div class="col-lg-5 fv-row">
+    <input type="text" id="collected_total" class="form-control form-control-lg form-control-solid" value="" placeholder="00.00" readonly />
+</div>
+<div class="badge badge-light-success"  id="tally_status" style="max-width: 20%; padding-left: 3%;">Tally</div>
+														<script>
+															document.addEventListener("DOMContentLoaded", function () {
+    // Elements
+    const grandTotalInput = document.getElementById("grand_total");
+    const collectedTotalInput = document.getElementById("collected_total");
+    const tallyStatusElement = document.getElementById("tally_status");
+    const totalDueElement = document.getElementById("collectedTotal"); // Assuming this is correct
+
+    // Calculate Tally
+    function calculateTally() {
+        const grandTotal = parseFloat(grandTotalInput.value) || 0;
+        const collectedTotal = parseFloat(collectedTotalInput.value) || 0;
+
+        // Extract total due amount
+        const totalDueMatch = totalDueElement.textContent.match(/Total Due Amount: (\d+(\.\d+)?)/);
+        const totalDueAmount = totalDueMatch ? parseFloat(totalDueMatch[1]) : 0;
+
+        // Debugging
+        console.log("Grand Total:", grandTotal);
+        console.log("Collected Total:", collectedTotal);
+        console.log("Total Due Amount:", totalDueAmount);
+
+        // Tally Check
+        const isTally = (grandTotal === (collectedTotal + totalDueAmount));
+        tallyStatusElement.textContent = isTally ? "Tally Check Passed" : "Tally Check Failed";
+        tallyStatusElement.style.color = isTally ? "green" : "red";
+        tallyStatusElement.classList.toggle("badge-light-success", isTally);
+        tallyStatusElement.classList.toggle("badge-light-danger", !isTally);
+    }
+
+    // Attach Listeners
+    [grandTotalInput, collectedTotalInput].forEach(input => {
+        input.addEventListener("input", calculateTally);
+    });
+
+    document.body.addEventListener("input", function (e) {
+        if (e.target.placeholder === "100") {
+            calculateTally();
+        }
+    });
+
+    // Initial Calculation
+    calculateTally();
+});
+
+														</script>
+														
+														
+
+												  </div>
+												  
+												  </div>
+												  </div>
+
+				
 						<!--end::Content wrapper-->
 						<!--begin::Footer-->
 						<div id="kt_app_footer" class="app-footer align-items-center justify-content-center justify-content-md-between flex-column flex-md-row py-3">
